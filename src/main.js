@@ -22,8 +22,9 @@ function update(alien){
   setInterval(() => {
     if(alien.alive === true){
       displayAlien(alien);
-    } else {
+      console.log(alien.age);
       console.log(alien.alive);
+    } else {
       return alien.alive == false;   
     }
   }, 250);
@@ -36,6 +37,7 @@ function engine(alien){
   alien.increaseBathroom();
   alien.increaseHunger();
   update(alien);
+ 
 }
 
 
@@ -50,4 +52,27 @@ $(document).ready(function(){
     $("#pet-display").show();
     engine(alien);
   });
+
+  $("#feed-btn").click(function(event){
+      event.preventDefault();
+      alien.feedFood();
+  })
+  
+  $("#bath-btn").click(function(event){
+    event.preventDefault();
+    alien.goBathroom();
+  })
+  
+  $("#med-btn").click(function(event){
+    event.preventDefault();
+    alien.healthButton();
+  })
+  
+  $("#play-btn").click(function(event){
+    event.preventDefault();
+    alien.increaseHappy();
+  })
+
+  
+  
 });

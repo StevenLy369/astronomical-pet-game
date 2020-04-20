@@ -17,7 +17,7 @@ export class Alien {
       if(this.happy <= 0){
         this.happy = 0;
       }
-    }, 18000);
+    }, 10000);
   }
 
   increaseHappy(){
@@ -35,12 +35,12 @@ export class Alien {
       if(this.age > 25){
         this.alive = false;
       }
-    },55000);
+    }, 30000);
   }
 
 
   increaseLife(){
-    if(this.age < 4){
+    if(this.age <= 4){
       return "Baby Alien";
     } else if(this.age >= 5 && this.age <= 9){
       return "Child Alien";
@@ -87,7 +87,7 @@ export class Alien {
       if(this.bathroom == 30){
         this.haveAccident();
       }    
-    }, 15000);
+    }, 8000);
   }
 
   goBathroom(){
@@ -113,7 +113,7 @@ export class Alien {
         this.decreaseHealth(50);
       } else if(this.hunger < 0)
         this.hungry = 0;
-    }, 12000);
+    }, 9000);
   }
 
 
@@ -121,6 +121,8 @@ export class Alien {
     this.hungry += 8;
     if(this.hungry <= 0){
       this.hungry = 0;
+    } else if(this.hungry >= 30){
+      this.hungry = 30
     }
   }
 }

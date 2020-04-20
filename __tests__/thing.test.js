@@ -16,7 +16,7 @@ describe('Alien', () => {
 // Happy Test
   test('happiness should be 24 ', () => {
     alien.decreaseHappy();
-    jest.advanceTimersByTime(18001);
+    jest.advanceTimersByTime(10001);
     expect(alien.happy).toEqual(14);
 
 
@@ -31,7 +31,7 @@ test('happiness should increase  by 5', () => {
 //  Age Test
 test('Age should increase every 55 seconds aswell as its age classifications', () => {
   alien.increaseAge();
-  jest.advanceTimersByTime(275001);
+  jest.advanceTimersByTime(150001);
   expect(alien.increaseLife()).toEqual("Child Alien");
   expect(alien.age).toEqual(5)
   })
@@ -55,7 +55,7 @@ test('Health should increase by 15 when called' , () => {
 // Bathroom Test
 test('Should increase bathroom level by 1 every 35 seconds', () => {
    alien.increaseBathroom();
-   jest.advanceTimersByTime(15001);
+   jest.advanceTimersByTime(8001);
    expect(alien.bathroom).toEqual(1);
 })
 
@@ -87,7 +87,7 @@ test('Should set bathroom to 0 and increase happy by 15 as well as add health' ,
 // Food Functionality
 test('When function is called: hunger decreases by 1 every 35 seconds', () => {
   alien.increaseHunger();
-  jest.advanceTimersByTime(12001);
+  jest.advanceTimersByTime(9001);
   expect(alien.hungry).toEqual(19);
 })
 
