@@ -17,7 +17,7 @@ export class Alien {
       if(this.happy <= 0){
         this.happy = 0;
       }
-    }, 20000)
+    }, 20000);
   }
 
   increaseHappy(){
@@ -49,10 +49,10 @@ export class Alien {
     } else if(this.age >= 15 && this.age <= 19){
       return "Adult Alien";
     } else if (this.age >= 20 && this.age <= 25){
-      return "Senior Alien"
+      return "Senior Alien";
     } else
-      return "Dead"
-  };
+      return "Dead";
+  }
 
 
   // Health Functionality
@@ -71,12 +71,12 @@ export class Alien {
     }
   }
 
-    healthButton() {
-      this.health += 15
-      if(this.health >= 50){
-       this.health = 50
-      }
+  healthButton() {
+    this.health += 15;
+    if(this.health >= 50){
+      this.health = 50;
     }
+  }
     
   
   //Bathroom Functionality
@@ -104,26 +104,25 @@ export class Alien {
 
     //Food Functionality 
 
-      increaseHunger(){
-        setInterval(() => {
+  increaseHunger(){
+      setInterval(() => {
           this.hungry --;
-          if(this.hungry <= 15){
+          if(this.hungry <= 8 && this.hungry >= 4){
             this.decreaseHealth(15);
-          } else if( this.hungry <= 5){
-            this.decreaseHealth(40)
-          } else if (this.hungry <= 0)
-            this.health = 0;
-            this.hungry = 0;
-        }, 35000);
+          } else if( this.hungry === 0){
+            this.decreaseHealth(50)
+          } else if(this.hunger < 0)
+             this.hungry = 0;
+        }, 20000);
       }
 
 
-    feedFood(){
+  feedFood(){
       this.hungry += 8;
       if(this.hungry <= 0){
-        this.hungry = 0;
-      }
+      this.hungry = 0;
     }
   }
+}
 
 

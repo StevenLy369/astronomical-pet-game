@@ -9,7 +9,7 @@ describe('Alien', () => {
     alien = new Alien();
     alien.health = 35; 
     alien.happy = 15;
-    alien.hungry = 30;
+    alien.hungry = 20;
   });
 
 
@@ -85,8 +85,16 @@ test('Should set bathroom to 0 and increase happy by 15 as well as add health' ,
 
 
 // Food Functionality
-// test('When function is called: hunger decreases, ')
+test('When function is called: hunger decreases by 1 every 35 seconds', () => {
+  alien.increaseHunger();
+  jest.advanceTimersByTime(20001);
+  expect(alien.hungry).toEqual(19);
+})
+
+test('should increase hunger by 8 when called.', () => {
+  alien.feedFood();
+  expect(alien.hungry).toEqual(28);
 
 
-
+})
 });

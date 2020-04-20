@@ -78,6 +78,39 @@ color: white;
     border-radius: 15px;
     margin-bottom: 15px;
     background-color: deeppink;
-    font-size: 25px;
+    font-size: 20px;
     font-family: cursive;
+}
+
+#pet-display {
+    display: none;
+    align-content: center;
+}
+#pet-name {
+    border: cyan solid 2px;
+}
+
+#name-col-div {
+    background-color: cyan;
+    border-radius: 15px;
+    border: deeppink 4px solid;
+}
+
+#input-box {
+    background-color: cyan;
+    border-radius: 15px;
+}
+
+#stats-row{
+    align-content: center;
+    justify-content: center;
+}
+
+#create-btn {
+    margin-top: 20px;
+    border-radius: 15px;
+    background-color: deeppink;
+    border: 2px solid cyan;
+    font-family: cursive;
+    font-size: 18px;
 }
