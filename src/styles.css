@@ -14,7 +14,7 @@ body {
     position: absolute;
     -webkit-animation: linear infinite alternate;
     -webkit-animation-name: traverse;
-    -webkit-animation-duration: 7s;
+    -webkit-animation-duration: 5s;
 }
 
 @-webkit-keyframes traverse {
