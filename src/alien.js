@@ -17,7 +17,7 @@ export class Alien {
       if(this.happy <= 0){
         this.happy = 0;
       }
-    }, 20000);
+    }, 18000);
   }
 
   increaseHappy(){
@@ -87,7 +87,7 @@ export class Alien {
       if(this.bathroom == 30){
         this.haveAccident();
       }    
-    }, 35000);
+    }, 15000);
   }
 
   goBathroom(){
@@ -102,24 +102,24 @@ export class Alien {
    
   }
 
-    //Food Functionality 
+  //Food Functionality 
 
   increaseHunger(){
-      setInterval(() => {
-          this.hungry --;
-          if(this.hungry <= 8 && this.hungry >= 4){
-            this.decreaseHealth(15);
-          } else if( this.hungry === 0){
-            this.decreaseHealth(50)
-          } else if(this.hunger < 0)
-             this.hungry = 0;
-        }, 20000);
-      }
+    setInterval(() => {
+      this.hungry --;
+      if(this.hungry <= 8 && this.hungry >= 4){
+        this.decreaseHealth(15);
+      } else if( this.hungry === 0){
+        this.decreaseHealth(50);
+      } else if(this.hunger < 0)
+        this.hungry = 0;
+    }, 12000);
+  }
 
 
   feedFood(){
-      this.hungry += 8;
-      if(this.hungry <= 0){
+    this.hungry += 8;
+    if(this.hungry <= 0){
       this.hungry = 0;
     }
   }
