@@ -1,21 +1,87 @@
 body {
-    background-color: grey;
     text-align: center;
+    background-image: url("https://images.hdqwalls.com/wallpapers/space-trip-4k-h2.jpg");
+   background-repeat: no-repeat; 
+   background-size: cover;
 }
 
 
 #alien-pic {
-    width: 120px;
-    height:  200px;
+    width: 100px;
+    height:  180px;
     background-position-x: center;
-    margin-top: 150px ;
+    margin-top: 175px ;
     position: absolute;
     z-index: 1;
-    margin-left: 28px;
+    margin-left: 300px;
+}
 
+#jumbo {
+    background-image: url("https://wallpaperaccess.com/full/2323501.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    
+}
+
+#house {
+    background-position-x: center;
+    width: 1000px;
+    border: 5px cyan solid;
+    border-radius: 15px;
 }
 
 
 #map{
     position: relative;
+}
+
+#title-head {
+    font-family: cursive;
+    color: deepskyblue;
+    text-decoration: underline br;
+}
+
+
+
+
+.col-md-3{
+    z-index: 1;
+    top: -85px;
+    margin-left: 200px;
+    padding: 5px;
+    
+}
+
+#feed-btn {
+border-radius: 10px;
+background-color: darkblue;
+color: white;
+}
+
+#play-btn {
+    border-radius: 10px;
+    background-color:red;
+    color: white;
+}
+
+#fun-btn {
+    border-radius: 10px;
+    background-color:yellow;
+    color: black;
+}
+
+#bath-btn{
+    border-radius: 10px;
+    background-color:green;
+    color: white;
+}
+
+#stats-row {
+    border: solid 5px cyan;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    background-color: deeppink;
+    font-size: 25px;
+    font-family: cursive;
 }
