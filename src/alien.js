@@ -31,11 +31,11 @@ export class Alien {
   // Age Functionality
   increaseAge(){
     setInterval(() => {
-      this.age++;
+      this.age ++;
       if(this.age > 25){
-        this.alive
+        this.alive = false;
       }
-    },55000)
+    },55000);
   }
 
 
@@ -56,24 +56,25 @@ export class Alien {
 
 
   // Health Functionality
-  addHealth(){
-    this.health += num
+  addHealth(num){
+    this.health += num;
     if(this.health >= 50){
       this.health = 50;
     }
   }
 
-  decreaseHealth(){
-    this.health -= num
+  decreaseHealth(num){
+    this.health -= num;
     if(this.health <= 0){
       this.alive = false;
+      this.health = 0;
     }
   }
 
     healthButton() {
       this.health += 15
       if(this.health >= 50){
-       this.healh = 50
+       this.health = 50
       }
     }
     
@@ -82,11 +83,10 @@ export class Alien {
   
   increaseBathroom(){
     setInterval(() => {
-      this.bathroom++
-      if(this.bathroom === 30){
+      this.bathroom += 1;
+      if(this.bathroom == 30){
         this.haveAccident();
-      }
-      
+      }    
     }, 35000);
   }
 
@@ -97,9 +97,9 @@ export class Alien {
   }
 
   haveAccident(){
-   this.bathroom = 0;
-   this.decreaseHealth(this.health / 4)
-
+    this.bathroom = 0;
+    this.decreaseHealth(20);
+   
   }
 
     //Food Functionality 
