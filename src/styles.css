@@ -1,9 +1,21 @@
 body {
-    background-color: black;
+    background-color: grey;
+    text-align: center;
 }
 
 
 #alien-pic {
-    width: 250px;
-    height: 150px;
+    width: 120px;
+    height:  200px;
+    background-position-x: center;
+    margin-top: 150px ;
+    position: absolute;
+    z-index: 1;
+    margin-left: 28px;
+
+}
+
+
+#map{
+    position: relative;
 }
