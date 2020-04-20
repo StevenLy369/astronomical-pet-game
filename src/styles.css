@@ -7,13 +7,13 @@ body {
 
 
 #alien-pic {
-    width: 100px;
-    height:  180px;
+    width: 63px;
+    height:  100px;
     background-position-x: center;
-    margin-top: 175px ;
+    margin-top: 315px ;
     position: absolute;
     z-index: 1;
-    margin-left: 300px;
+    margin-left: 320px;
 }
 
 #jumbo {
@@ -42,15 +42,11 @@ body {
     text-decoration: underline br;
 }
 
-
-
-
 .col-md-3{
     z-index: 1;
     top: -85px;
     margin-left: 200px;
-    padding: 5px;
-    
+    padding: 5px;  
 }
 
 #feed-btn {

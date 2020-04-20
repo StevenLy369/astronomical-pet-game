@@ -35,12 +35,12 @@ export class Alien {
       if(this.age > 25){
         this.alive
       }
-    },90000)
+    },55000)
   }
 
 
   increaseLife(){
-    if(this.age < 5){
+    if(this.age < 4){
       return "Baby Alien";
     } else if(this.age >= 5 && this.age <= 9){
       return "Child Alien";
