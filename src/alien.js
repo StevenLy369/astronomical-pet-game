@@ -1,12 +1,12 @@
  export class Alien {
   constructor(name) {
     this.name = name;
-    this.health = 50; 
+    this.health = 20; 
     this.age = 0;
     this.alive = true;
     this.bathroom = 0;
     this.happy = 25;
-    this.hungry = 30;
+    this.hungry = 10;
   }
 
 

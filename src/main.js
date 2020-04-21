@@ -7,7 +7,7 @@ import { Alien } from '../src/alien';
 const urlFun = "https://api.giphy.com/v1/gifs/pHYLxGVWf4J4DmS6k6?api_key=WZ6j341npaXaXQsbdICWWvyAE14rr9lY";
 const urlHealth = "http://api.giphy.com/v1/gifs/1itJk0YC7kUYF6yv70?q=cute+cartoon+bandaid&api_key=5a0es7p3EfdqyxbDjaa2K7vQEL5m7V7i";
 const urlBathroom = "http://api.giphy.com/v1/gifs/2wS9xmYJNsFUTzcNKU?q=cute+bathroom&api_key=5a0es7p3EfdqyxbDjaa2K7vQEL5m7V7i";
-// const urlFood = "http://api.giphy.com/v1/gifs/mB9gnpgb6q2TLAqOrW?q=cute+cake&api_key=5a0es7p3EfdqyxbDjaa2K7vQEL5m7V7i";
+const urlFood = "http://api.giphy.com/v1/gifs/mB9gnpgb6q2TLAqOrW?q=cute+cake&api_key=5a0es7p3EfdqyxbDjaa2K7vQEL5m7V7i";
 const urlBed = "http://api.giphy.com/v1/gifs/26DN5KMrgPam7qtYA?q=cute+cartoon+bed&api_key=5a0es7p3EfdqyxbDjaa2K7vQEL5m7V7i"
 
 function displayGif(gifUrl){
@@ -29,17 +29,28 @@ function displayAlien(alien){
   $("#hunger").text(`Hunger Level:  ${alien.hungry}`);
   $("#age").text(`Age: ${alien.increaseLife()}`);
   $("#happy").text(`Happiness: ${alien.happy}`);
+  console.log(alien.alive)
+}
+
+
+
+function onDeath(alien, interval){
+  $("#stats-row").hide();
+  $("#img-div").hide();
+  $("#btn-row").hide();
+  $("#dead").show();
+  $("#dead").text(`${alien.name} has died oh no!!!`)
+  $("#funeral").show();
+  clearTimeout(interval)
 }
 
 
 function update(alien){
-  setInterval(() => {
+  let interval = setInterval(() => {
     if(alien.alive === true){
       displayAlien(alien);
     } else {
-      $("#dead").show
-      return alien.alive == false; 
-      
+     onDeath(alien, interval);
     }
   }, 250);
 }
@@ -51,7 +62,6 @@ function engine(alien){
   alien.increaseBathroom();
   alien.increaseHunger();
   update(alien);
- 
 }
 
 
@@ -65,11 +75,24 @@ $(document).ready(function(){
     $("#name-input-div").hide();
     $("#pet-display").show();
     engine(alien);
+    
   });
 
   $("#feed-btn").click(function(event){
       event.preventDefault();
       alien.feedFood();
+      fetch(urlFood)
+      .then(function(response){
+        return response.json();
+      })
+      .then(function(jsonifiedResponse){
+        let gifUrl = jsonifiedResponse.data.images.downsized_large.url;
+        displayGif(gifUrl);
+        $("#gif").slideDown();
+        $(".button").prop("disabled", true);
+        hideGif();
+
+      })
   })
   
   $("#bath-btn").click(function(event){
