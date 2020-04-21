@@ -1,4 +1,4 @@
-export class Alien {
+ export class Alien {
   constructor(name) {
     this.name = name;
     this.health = 50; 

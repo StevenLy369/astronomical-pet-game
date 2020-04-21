@@ -18,9 +18,9 @@ body {
 }
 
 @-webkit-keyframes traverse {
-    0% {left:40%;}
+    0% {left:42%;}
     50% {left: 57%;}
-    100% {left: 40%;}
+    100% {left: 42%;}
 }
 
 #jumbo {
