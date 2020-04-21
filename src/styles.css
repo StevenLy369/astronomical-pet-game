@@ -32,6 +32,15 @@ body {
     100% {left: 42%;}
 }
 
+#gif {
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    border-radius: 20px;
+    background-size: 200px;
+    background-repeat: no-repeat;  
+}
+
 #jumbo {
     background-image: url("https://wallpaperaccess.com/full/2323501.jpg");
     background-repeat: no-repeat;
@@ -55,7 +64,9 @@ body {
     display: show;
 }
 
-
+#dead {
+    display: none;
+}
 
 
 #map{

@@ -60,7 +60,7 @@ test('Should increase bathroom level by 1 every 35 seconds', () => {
 })
 
 test('should reset your bathroom level on having an accident.', () => {
-  alien.bathroom = 30;
+  alien.bathroom = 15;
   alien.increaseBathroom();
   alien.haveAccident();
   expect(alien.bathroom).toEqual(0);

@@ -84,7 +84,7 @@
   increaseBathroom(){
     setInterval(() => {
       this.bathroom += 1;
-      if(this.bathroom == 30){
+      if(this.bathroom == 15){
         this.haveAccident();
       }    
     }, 8000);
