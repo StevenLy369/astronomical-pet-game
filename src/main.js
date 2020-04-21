@@ -22,6 +22,7 @@ function hideGif(){
   }, 3200)
 }
 
+
 function displayAlien(alien){
   $("#pet-name").text(`Name: ${alien.name}`);
   $("#health").text(`Health:  ${alien.health}`);
@@ -29,9 +30,7 @@ function displayAlien(alien){
   $("#hunger").text(`Hunger Level:  ${alien.hungry}`);
   $("#age").text(`Age: ${alien.increaseLife()}`);
   $("#happy").text(`Happiness: ${alien.happy}`);
-  console.log(alien.alive)
 }
-
 
 
 function onDeath(alien, interval){
@@ -75,7 +74,8 @@ $(document).ready(function(){
     $("#name-input-div").hide();
     $("#pet-display").show();
     engine(alien);
-    
+    alien.nameToString()
+    console.log(alien.name)
   });
 
   $("#feed-btn").click(function(event){

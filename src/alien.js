@@ -9,7 +9,6 @@
     this.hungry = 10;
   }
 
-
   // Happy Functionality
   decreaseHappy(){
     setInterval(() => {
