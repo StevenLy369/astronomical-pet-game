@@ -77,6 +77,13 @@ $(document).ready(function(){
     alien.increaseHappy();
   })
 
+  $("#sleep-btn").click(function(event){
+    event.preventDefault();
+    $("#sleep").toggle();
+    $("#alien-pic").toggle();
+    $("#house").toggle();
+  })
+
   
   
 });
