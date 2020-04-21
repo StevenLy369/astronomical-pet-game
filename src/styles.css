@@ -80,7 +80,7 @@ body {
     display: none;
     font-size: 50px;
     color: cyan;
-    text-transform: capitalize
+    text-transform: capitalize;
 }
 
 
@@ -103,29 +103,46 @@ body {
 border-radius: 10px;
 background-color: darkblue;
 color: white;
+border: 2px solid cyan;
 }
 
 #sleep-btn {
     border-radius: 10px;
     background-color: darkorange;
+    border: 2px solid cyan;
 }
 
 #play-btn {
     border-radius: 10px;
     background-color:yellow;
     color:black;
+    border: 2px solid cyan;
 }
 
 #med-btn {
     border-radius: 10px;
     background-color:red;
     color: white;
+    border: 2px solid cyan;
+}
+
+#version {
+    font-size: 20px;
+    color: deeppink;
 }
 
 #bath-btn{
     border-radius: 10px;
     background-color:green;
     color: white;
+    border: 2px solid cyan;
+}
+
+#reset-btn {
+    display: none;
+    border-radius: 10;
+    background-color: deeppink;
+    border: 2px solid cyan;
 }
 
 #stats-row {

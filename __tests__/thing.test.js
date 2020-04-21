@@ -77,7 +77,7 @@ test('should decrease your health on an accident.', () => {
 test('Should set bathroom to 0 and increase happy by 15 as well as add health' , () => {
   alien.goBathroom();
   expect(alien.bathroom).toEqual(0);
-  expect(alien.happy).toEqual(30);
+  expect(alien.happy).toEqual(25);
   expect(alien.health).toEqual(50);
 })
 

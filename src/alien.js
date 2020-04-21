@@ -1,12 +1,12 @@
- export class Alien {
+export class Alien {
   constructor(name) {
     this.name = name;
-    this.health = 20; 
+    this.health = 40; 
     this.age = 0;
     this.alive = true;
     this.bathroom = 0;
     this.happy = 25;
-    this.hungry = 10;
+    this.hungry = 30;
   }
 
   // Happy Functionality
@@ -25,7 +25,6 @@
       this.happy = 25;
     }
   }
-
 
   // Age Functionality
   increaseAge(){
@@ -101,7 +100,6 @@
   haveAccident(){
     this.bathroom = 0;
     this.decreaseHealth(20);
-   
   }
 
   //Food Functionality 
@@ -118,13 +116,12 @@
     }, 9000);
   }
 
-
   feedFood(){
     this.hungry += 8;
     if(this.hungry <= 0){
       this.hungry = 0;
     } else if(this.hungry >= 30){
-      this.hungry = 30
+      this.hungry = 30;
     }
   }
 }
