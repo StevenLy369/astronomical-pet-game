@@ -94,6 +94,9 @@
     this.bathroom = 0;
     this.happy += 15;
     this.addHealth(15);
+    if(this.happy > 25){
+      return this.happy = 25;
+    }
   }
 
   haveAccident(){
