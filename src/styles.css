@@ -5,6 +5,15 @@ body {
    background-size: cover;
 }
 
+#sleep-alien {
+   width: 63px;
+   height: 100px; 
+   position: fixed;
+   right: 42%;
+   top: 38.5%;
+   transform: rotate(90deg);
+}
+
 
 #alien-pic {
     width: 63px;
@@ -39,6 +48,8 @@ body {
 }
 
 
+
+
 #map{
     position: relative;
 }
@@ -58,6 +69,11 @@ body {
 border-radius: 10px;
 background-color: darkblue;
 color: white;
+}
+
+#sleep-btn {
+    border-radius: 10px;
+    background-color: darkorange;
 }
 
 #play-btn {
